@@ -10,19 +10,17 @@
   <body>
     <div class="Ding">
       <div class="Ding__container">
-        <div class="Ding__header">
-          <h1 class="">Ding</h1>
-        </div>
-        <section class="Ding__timer">
-          <div class="Ding__timerOuterCircle">
-            <div class="Ding__timerInnerCircle">
-              <span class="Ding__timerSecondsCounter">25s</span>
-            </div>
+        <div class="Ding__header"></div>
+        <div class="Ding__timerContainer">
+          <span id="Ding__timerSecondsCounter">10</span>
+          <canvas class="Ding__timer" width="200" height="200"></canvas>
+          <div class="Ding__actionButtons">
+            <button id="Ding__timerResetButton">Reset</button>
+            <button id="Ding__timerRecordButton">Record</button>
           </div>
-          <button class="Ding__timerRecordButton">Record</button>
-        </section>
+        </div>
       </div>
     </div>
-    <!-- <script type="module" src="/src/main.ts"></script> -->
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

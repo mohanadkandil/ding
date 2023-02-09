@@ -16,7 +16,6 @@ body {
   align-items: center;
   overflow: hidden;
   width: 300px;
-  height: 350px;
   padding: 1em;
   box-sizing: border-box;
 }
@@ -27,31 +26,28 @@ body {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  .Ding__timerOuterCircle {
-    width: 160px;
-    height: 160px;
-    border-radius: 100%;
-    background: #21e6c1;
-  }
-  .Ding__timerInnerCircle {
-    width: 140px;
-    height: 140px;
-    border-radius: 100%;
-    background: #27ffd6;
-    position: relative;
-    top: 10px;
-    left: 10px;
+  border: 2px solid #27ffd6;
+  -webkit-border-radius: 200px;
+}
 
-    .Ding__timerSecondsCounter {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      font-size: 36px;
-      font-weight: 600;
-    }
-  }
-  .Ding__timerRecordButton {
+.Ding__timerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  gap: 16px;
+  height: 100%;
+}
+
+.Ding__actionButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  #Ding__timerRecordButton,
+  #Ding__timerResetButton {
     width: 120px;
     height: 36px;
     border-radius: 8px;
@@ -61,6 +57,12 @@ body {
     font-size: 16px;
     font-weight: 600;
   }
+}
+
+#Ding__timerSecondsCounter {
+  position: absolute;
+  left: 50%;
+  -webkit-border-radius: 200px;
 }
 
 .Ding__slack {
