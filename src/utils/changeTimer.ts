@@ -13,6 +13,7 @@ export function changeTimer() {
   var seconds = <HTMLDivElement>(
     document.getElementById("Ding__timerSecondsCounter")
   );
+  seconds.innerHTML = "0"; // set the seconds counter to 0 for the 1st time
   var timerOn = false;
   var second = (2 * Math.PI) / 60;
   var start = 1.5 * Math.PI;
