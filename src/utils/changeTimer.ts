@@ -33,7 +33,7 @@ export function changeTimer() {
   recordButton.addEventListener("click", function () {
     if (!timerOn) {
       recordButton.innerHTML = "Stop";
-      cancelAudioRecording();
+      startAudioRecording();
       recordButton.style.backgroundColor = "#f45d48";
       timerOn = true;
       animation = setInterval(function () {
@@ -42,7 +42,6 @@ export function changeTimer() {
       }, 50);
     } else {
       recordButton.innerHTML = "Record";
-      startAudioRecording();
       recordButton.style.backgroundColor = "#27ffd6";
       timerOn = false;
       clearInterval(animation);
@@ -50,6 +49,7 @@ export function changeTimer() {
   });
   resetButton.addEventListener("click", function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    cancelAudioRecording();
     seconds.innerHTML = "0";
     timerOn = false;
     clearInterval(animation);
