@@ -13,6 +13,20 @@
     "vite": "^4.1.0"
   },
   "dependencies": {
+    "aws-sdk": "^2.1323.0",
     "sass": "^1.58.0"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohanadkandil/ding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohanadkandil/ding/issues"
+  },
+  "homepage": "https://github.com/mohanadkandil/ding#readme",
+  "description": ""
 }
