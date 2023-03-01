@@ -3,7 +3,18 @@
   "name": "Ding",
   "description": "Send a VN ding to your peers while working in seconds",
   "version": "0.0.1",
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "default_popup": "index.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["content.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["tabCapture", "downloads", "storage", "audioCapture", "tabs"]
 }
